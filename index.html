@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Home Appliances | Quality Home Appliances in Markham, Ontario</title>
+<meta name="description" content="Prime Home Appliances is Markham's local home appliance store. Shop refrigerators, ranges, washers, dryers, dishwashers, microwaves and freezers from top brands at honest prices.">
+<style>
+  :root{
+    --navy:#0B2433; --orange:#F6A94A; --ink:#24343E; --muted:#61717A;
+    --bg:#ffffff; --soft:#F7F9FA; --line:#E6ECEF;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;background:var(--bg)}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  /* header — slim like the reference */
+  header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:50}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+  .nav img.logo{height:46px}
+  .nav nav a{margin:0 14px;text-decoration:none;color:var(--ink);font-weight:500;font-size:15px}
+  .nav nav a:hover{color:var(--orange)}
+  .btn{display:inline-block;background:var(--orange);color:var(--navy);font-weight:700;text-decoration:none;padding:12px 26px;border-radius:6px;border:none;cursor:pointer;font-size:16px}
+  .btn:hover{filter:brightness(.95)}
+  .btn-outline{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+  /* hero — compact */
+  .hero{padding:56px 0 48px}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .hero h1{font-size:40px;line-height:1.2;color:var(--navy);margin-bottom:14px}
+  .hero p.sub{font-size:17px;color:var(--muted);margin-bottom:26px}
+  .hero .cta .btn{margin:0 10px 10px 0}
+  .hero img{border-radius:12px}
+  /* category grid — the centerpiece, like the reference Collections */
+  section{padding:60px 0}
+  section.alt{background:var(--soft)}
+  h2{font-size:28px;color:var(--navy);margin-bottom:8px;text-align:center}
+  p.lead{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 34px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .15s ease, box-shadow .15s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(11,36,51,.08)}
+  .card img{width:100%;height:230px;object-fit:cover}
+  .card h3{font-size:18px;color:var(--navy);padding:16px 18px 4px;text-align:center}
+  .card p{font-size:14px;color:var(--muted);padding:0 18px 20px;text-align:center}
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .about-grid img{border-radius:12px}
+  .about-grid h2{text-align:left}
+  .about-grid p{margin-bottom:14px}
+  /* why */
+  .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .why{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+  .why h3{color:var(--navy);margin-bottom:8px;font-size:17px}
+  .why h3 .tick{color:var(--orange);margin-right:8px}
+  .why p{color:var(--muted);font-size:14px}
+  /* gallery */
+  .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .gal-grid img{border-radius:12px;height:220px;width:100%;object-fit:cover}
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:10px}
+  .contact-info p{margin-bottom:14px}
+  .contact-info strong{color:var(--navy)}
+  .contact-info a{color:var(--ink)}
+  form .field{margin-bottom:14px}
+  form label{display:block;font-weight:600;margin-bottom:6px;color:var(--navy);font-size:14px}
+  form input,form textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:6px;font-size:15px;font-family:inherit}
+  form textarea{min-height:110px;resize:vertical}
+  #formMsg{margin-top:12px;font-weight:600}
+  /* footer */
+  footer{background:var(--navy);color:#C9D6DC;padding:34px 0;text-align:center;font-size:14px}
+  footer strong{color:#fff}
+  @media(max-width:860px){
+    .hero .wrap,.about-grid,.contact-grid{grid-template-columns:1fr}
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .why-grid,.gal-grid{grid-template-columns:1fr 1fr}
+    .hero h1{font-size:30px}
+    .nav nav{display:none}
+  }
+  @media(max-width:540px){.grid,.gal-grid,.why-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <img class="logo" src="assets/logo-combined.png" alt="Prime Home Appliances logo">
+    <nav>
+      <a href="#categories">Products</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="tel:+14375514689" style="padding:10px 20px;font-size:15px;">(437) 551-4689</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Quality Home Appliances in Markham</h1>
+      <p class="sub">Refrigerators, ranges, washers, dryers and more from top brands like Samsung, LG, Whirlpool and GE — at prices that beat the big-box stores.</p>
+      <div class="cta">
+        <a class="btn" href="tel:+14375514689">Call Now</a>
+        <a class="btn btn-outline" href="#contact">Visit Our Store</a>
+      </div>
+    </div>
+    <img src="assets/hero-kitchen.jpg" alt="Modern kitchen with stainless steel appliances">
+  </div>
+</div>
+
+<section id="categories" style="padding-top:20px">
+  <div class="wrap">
+    <h2>Our Products</h2>
+    <p class="lead">Explore our range of home appliances — visit the store to see them in person.</p>
+    <div class="grid">
+      <div class="card"><img src="assets/fridge.jpg" alt="Refrigerators"><h3>Refrigerators</h3><p>French-door, side-by-side and bottom-freezer models.</p></div>
+      <div class="card"><img src="assets/range.jpg" alt="Ranges and cooktops"><h3>Ranges &amp; Cooktops</h3><p>Gas and electric ranges for every kitchen.</p></div>
+      <div class="card"><img src="assets/washer-dryer.jpg" alt="Washers and dryers"><h3>Washers &amp; Dryers</h3><p>Front-load and top-load laundry pairs.</p></div>
+      <div class="card"><img src="assets/dishwasher.jpg" alt="Dishwashers"><h3>Dishwashers</h3><p>Quiet, energy-efficient built-in models.</p></div>
+      <div class="card"><img src="assets/microwave.jpg" alt="Microwaves"><h3>Microwaves</h3><p>Over-the-range and countertop options.</p></div>
+      <div class="card"><img src="assets/freezer.webp" alt="Freezers"><h3>Freezers</h3><p>Upright and chest freezers for extra storage.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="alt">
+  <div class="wrap about-grid">
+    <img src="assets/showroom.jpg" alt="Prime Home Appliances showroom">
+    <div>
+      <h2>About Us</h2>
+      <p>Prime Home Appliances is your neighbourhood home appliance store in Markham, Ontario. We stock a wide range of refrigerators, cooking ranges, laundry pairs, dishwashers, microwaves and freezers from the brands Canadians trust.</p>
+      <p>No pushy salespeople, no confusing flyers — just honest advice, fair prices, and service from people who know appliances inside out. Come visit our showroom and see everything in person before you buy.</p>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <h2>Why Choose Us</h2>
+    <p class="lead">&nbsp;</p>
+    <div class="why-grid">
+      <div class="why"><h3><span class="tick">✓</span>Local &amp; Personal</h3><p>Real advice from appliance experts — not a call centre.</p></div>
+      <div class="why"><h3><span class="tick">✓</span>Honest Prices</h3><p>Competitive prices on top brands, without the big-box markup.</p></div>
+      <div class="why"><h3><span class="tick">✓</span>Delivery &amp; Installation</h3><p>We deliver to your home and can arrange professional installation.</p></div>
+      <div class="why"><h3><span class="tick">✓</span>After-Sales Support</h3><p>Questions after your purchase? Call us — we're right here in Markham.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="alt">
+  <div class="wrap">
+    <h2>Gallery</h2>
+    <p class="lead">From our showroom to your home.</p>
+    <div class="gal-grid">
+      <img src="assets/showroom.jpg" alt="Appliance showroom">
+      <img src="assets/delivery.jpg" alt="Appliance delivery">
+      <img src="assets/installation.jpg" alt="Appliance installation">
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact Us</h2>
+    <p class="lead">Questions about a product or a price? Send us a message or drop by the store.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p><strong>Address</strong><br>639 Highglen Avenue<br>Markham, Ontario</p>
+        <p><strong>Phone</strong><br><a href="tel:+14375514689">(437) 551-4689</a></p>
+        <p><strong>Email</strong><br><a href="mailto:info@primehomeappliances.ca">info@primehomeappliances.ca</a></p>
+        <p><strong>Hours</strong><br>Mon – Sat: 10:00 AM – 6:00 PM<br>Sunday: Closed</p>
+      </div>
+      <form id="contactForm" method="post" action="inquiry.php">
+        <div class="field"><label for="fName">Name</label><input id="fName" name="name" type="text" required></div>
+        <div class="field"><label for="fPhone">Phone</label><input id="fPhone" name="phone" type="tel"></div>
+        <div class="field"><label for="fEmail">Email</label><input id="fEmail" name="email" type="email" required></div>
+        <div class="field"><label for="fMsg">Message</label><textarea id="fMsg" name="message" required></textarea></div>
+        <button class="btn" type="submit">Send Message</button>
+        <p id="formMsg"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Prime Home Appliances</strong><br>
+    639 Highglen Avenue, Markham, Ontario &nbsp;·&nbsp; (437) 551-4689 &nbsp;·&nbsp; info@primehomeappliances.ca</p>
+    <p style="margin-top:10px;font-size:12px;">© 2026 Prime Home Appliances. Website by Hifill Design Studio.</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const msg = document.getElementById('formMsg');
+  msg.style.color = '#61717A'; msg.textContent = 'Sending…';
+  try{
+    const res = await fetch('inquiry.php', { method:'POST', body:new FormData(this) });
+    if(res.ok){ msg.style.color = 'green'; msg.textContent = 'Thank you! We will get back to you soon.'; this.reset(); }
+    else{ msg.style.color = 'red'; msg.textContent = 'Something went wrong. Please call us at (437) 551-4689.'; }
+  }catch(err){ msg.style.color = 'red'; msg.textContent = 'Something went wrong. Please call us at (437) 551-4689.'; }
+});
+</script>
+
+</body>
+</html>
