@@ -57,7 +57,7 @@
   .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   .gal-grid img{border-radius:12px;height:220px;width:100%;object-fit:cover}
   /* contact */
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:10px}
+  .contact-top{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;margin:10px 0 40px;align-items:stretch}
   .contact-info p{margin-bottom:14px}
   .contact-info strong{color:var(--navy)}
   .contact-info a{color:var(--ink)}
@@ -66,13 +66,14 @@
   form input,form textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:6px;font-size:15px;font-family:inherit}
   form textarea{min-height:110px;resize:vertical}
   #formMsg{margin-top:12px;font-weight:600}
-  .map-wrap{margin-top:36px;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
-  .map-wrap iframe{width:100%;height:360px;border:0;display:block}
+  .map-wrap{border-radius:12px;overflow:hidden;border:1px solid var(--line);min-height:300px}
+  .map-wrap iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+  #contactForm{max-width:680px;margin:0 auto}
   /* footer */
   footer{background:var(--navy);color:#C9D6DC;padding:34px 0;text-align:center;font-size:14px}
   footer strong{color:#fff}
   @media(max-width:860px){
-    .hero .wrap,.about-grid,.contact-grid{grid-template-columns:1fr}
+    .hero .wrap,.about-grid,.contact-top{grid-template-columns:1fr}
     .grid{grid-template-columns:repeat(2,1fr)}
     .why-grid,.gal-grid{grid-template-columns:1fr 1fr}
     .hero h1{font-size:30px}
@@ -165,25 +166,25 @@
   <div class="wrap">
     <h2>Contact Us</h2>
     <p class="lead">Questions about a product or a price? Send us a message or drop by the store.</p>
-    <div class="contact-grid">
+    <div class="contact-top">
       <div class="contact-info">
         <p><strong>Address</strong><br>639 Highglen Avenue<br>Markham, Ontario</p>
         <p><strong>Phone</strong><br><a href="tel:+14375514689">(437) 551-4689</a></p>
         <p><strong>Email</strong><br><a href="mailto:info@primehomeappliances.ca">info@primehomeappliances.ca</a></p>
         <p><strong>Hours</strong><br>Mon – Sat: 10:00 AM – 6:00 PM<br>Sunday: Closed</p>
       </div>
-      <form id="contactForm" method="post" action="inquiry.php">
-        <div class="field"><label for="fName">Name</label><input id="fName" name="name" type="text" required></div>
-        <div class="field"><label for="fPhone">Phone</label><input id="fPhone" name="phone" type="tel"></div>
-        <div class="field"><label for="fEmail">Email</label><input id="fEmail" name="email" type="email" required></div>
-        <div class="field"><label for="fMsg">Message</label><textarea id="fMsg" name="message" required></textarea></div>
-        <button class="btn" type="submit">Send Message</button>
-        <p id="formMsg"></p>
-      </form>
+      <div class="map-wrap">
+        <iframe title="Prime Home Appliances location map" src="https://maps.google.com/maps?q=639%20Highglen%20Avenue%2C%20Markham%2C%20Ontario&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
     </div>
-    <div class="map-wrap">
-      <iframe title="Prime Home Appliances location map" src="https://maps.google.com/maps?q=639%20Highglen%20Avenue%2C%20Markham%2C%20Ontario&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-    </div>
+    <form id="contactForm" method="post" action="inquiry.php">
+      <div class="field"><label for="fName">Name</label><input id="fName" name="name" type="text" required></div>
+      <div class="field"><label for="fPhone">Phone</label><input id="fPhone" name="phone" type="tel"></div>
+      <div class="field"><label for="fEmail">Email</label><input id="fEmail" name="email" type="email" required></div>
+      <div class="field"><label for="fMsg">Message</label><textarea id="fMsg" name="message" required></textarea></div>
+      <button class="btn" type="submit">Send Message</button>
+      <p id="formMsg"></p>
+    </form>
   </div>
 </section>
 
